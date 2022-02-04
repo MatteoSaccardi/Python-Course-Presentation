@@ -107,7 +107,7 @@ def analyze (nameFolder = "0", wantchecks = 0, wantkexact = 0):
         data1 = np.delete(data1, obj = 0, axis = 1) # non siamo interessati ai conteggi
         data1 = np.delete(data1, obj = 0, axis = 1) # non siamo interessati a <M>
         for i2 in range(len(kappa)):
-            data[i1,i2,:,:] = data1[range((i2-1)*T,i2*T),:]
+            data[i1,i2,:,:] = data1[range(i2*T,(i2+1)*T),:]
     
     '''
     Ora, vogliamo analizzare i dati. Creiamo un unico array corrispondente
